@@ -3,9 +3,9 @@ const mysql = require("mysql");
 let mysqlConnection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "root",
+  password: "",
   database: "Node_Project",
-  port: 8889,
+  //port: 8889,
 });
 
 mysqlConnection.connect((err) => {
