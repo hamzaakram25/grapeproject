@@ -27,4 +27,9 @@ app.use("/markets", markets);
 const emailbuilder = require("./controllers/email-builder");
 app.use("/emailbuilder", emailbuilder);
 
+///// for market locations
+
+const marketlocations = require("./controllers/market-location");
+app.use("/marketlocations", marketlocations);
+
 app.listen(3133, () => console.log("Express Server is running on Port 3133."));
