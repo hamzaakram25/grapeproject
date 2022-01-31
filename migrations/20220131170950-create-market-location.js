@@ -14,7 +14,10 @@ module.exports = {
       Longitude: {
         type: Sequelize.INTEGER
       },
-      Label: {
+      Name: {
+        type: Sequelize.STRING
+      },
+      Image: {
         type: Sequelize.STRING
       },
       createdAt: {

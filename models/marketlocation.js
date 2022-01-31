@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
   MarketLocation.init({
     Latitude: DataTypes.INTEGER,
     Longitude: DataTypes.INTEGER,
-    Label: DataTypes.STRING
+    Name: DataTypes.STRING,
+    Image: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'MarketLocation',
