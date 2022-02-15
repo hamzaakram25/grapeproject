@@ -15,4 +15,16 @@ Router.get("/", (req, res) => {
   );
 });
 
+// Insert an marker
+Router.post("/", (req, res) => {
+  let marker = req.body;
+  mysqlConnection.query(
+    `INSERT INTO marketlocations (Latitude, Longitude, Name, Image, IconUrl, IconShadow) VALUES ('${marker.Latitude}', '${marker.Longitude}','${marker.Name}','${marker.Image}','${marker.IconUrl}','${marker.IconShadow}')`,
+    (err, rows, fields) => {
+      if (!err) res.send("Inserted Successfully.");
+      else console.log(err);
+    }
+  );
+});
+
 module.exports = Router;
